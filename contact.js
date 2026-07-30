@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 const router = express.Router();
 
 // Replace with your real receiving email address
-const RECEIVING_EMAIL_ADDRESS = 'jesulayomitimze55@gmail.com';
+const RECEIVING_EMAIL_ADDRESS = process.env.RECEIVING_EMAIL || 'contact@example.com';
 
 // Configure your SMTP transport (fill in your real credentials)
 // const transporter = nodemailer.createTransport({
@@ -21,8 +21,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: 'jesulayomitimze55@gmail.com',
-    pass: 'fotbjyfextbfwore' 
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASSWORD
   },
   family: 4
 });
