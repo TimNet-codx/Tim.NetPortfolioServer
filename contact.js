@@ -18,16 +18,16 @@ const RECEIVING_EMAIL_ADDRESS = process.env.RECEIVING_EMAIL || 'contact@example.
 //   }
 // });
 
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD
-  },
-  family: 4
-});
+// const transporter = nodemailer.createTransport({
+//   host: 'smtp.gmail.com',
+//   port: 587,
+//   secure: false,
+//   auth: {
+//     user: process.env.GMAIL_USER,
+//     pass: process.env.GMAIL_APP_PASSWORD
+//   },
+//   family: 4
+// });
 
 // router.post('/contact', async (req, res) => {
 //   const { name, email, subject, message } = req.body;
