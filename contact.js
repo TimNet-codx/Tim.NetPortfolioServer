@@ -72,7 +72,7 @@ router.post('/contact', async (req, res) => {
 
   try {
     await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>', // works immediately without domain verification
+      from: 'Portfolio Contact <contact.timnetportfolio.com>', // works immediately without domain verification
       to: RECEIVING_EMAIL_ADDRESS,
       replyTo: email,
       subject: subject || 'New Contact Form Submission',
